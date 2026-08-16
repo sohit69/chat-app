@@ -20,7 +20,7 @@ import { Server } from "socket.io";
 import { v2 as cloudinary } from "cloudinary";
 import { v4 as uuid } from "uuid";
 
-import { connectToDB } from "./utils/connectToDB.js";
+import connectToDB  from "./utils/connectToDB.js";
 import { errorMiddleware } from "./middlewares/error.js";
 import {
   CHAT_JOINED,
