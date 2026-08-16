@@ -13,7 +13,10 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
-import { corsOptions } from "./constants/config.js";
+const corsOptions = {
+      origin: process.env.CLIENT_URL || "http://localhost:5173",
+      credentials: true
+    };
 
 import http from "http";
 import { Server } from "socket.io";
