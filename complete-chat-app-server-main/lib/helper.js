@@ -1,4 +1,4 @@
-import {userSocketIDs} from '../app.js'
+import {userSocketIDs} from '../src/app.js'
 
 export const getOtherMemberExceptUser = (members, userId) => {
     return members.find(member => member._id.toString() !== userId.toString());
