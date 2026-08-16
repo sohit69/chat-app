@@ -2,9 +2,9 @@ import { User } from "../models/user.model.js";
 import { Chat } from "../models/chat.model.js";
 import { Message } from "../models/message.model.js";
 import { ALERT, NEW_MESSAGE, NEW_MESSAGE_ALERT, REFETCH_CHATS } from "../constants/events.js";
-import { emitEvent, uploadFilesToCloudinary, deletFilesFromCloudinary } from "../utils/features.js";
+import { emitEvent, uploadFilesToCloudinary, deletFilesFromCloudinary } from "../src/utils/features.js";
 import { getOtherMemberExceptUser } from "../lib/helper.js";
-import { ErrorHandler } from "../utils/errorhandler.js";
+import { ErrorHandler } from "../src/utils/errorhandler.js";
 
 export const newGroupChat = async (req, res, next) => {
     try {

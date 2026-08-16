@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { ErrorHandler } from "../utils/errorhandler.js"
+import { ErrorHandler } from "../src/utils/errorhandler.js"
 import { CHAT_TOKEN } from '../constants/config.js';
 const adminSecretKey = process.env.ADMIN_SECRET_KEY || "Admin@123";
 import { User } from '../models/user.model.js';

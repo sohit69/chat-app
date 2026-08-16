@@ -13,7 +13,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
-import { corsOptions } from "./constants/config.js";
+import { corsOptions } from "../constants/config.js";
 
 import http from "http";
 import { Server } from "socket.io";
@@ -21,7 +21,7 @@ import { v2 as cloudinary } from "cloudinary";
 import { v4 as uuid } from "uuid";
 
 import connectToDB  from "./utils/connectToDB.js";
-import { errorMiddleware } from "./middlewares/error.js";
+import { errorMiddleware } from "../middlewares/error.js";
 import {
   CHAT_JOINED,
   CHAT_LEAVED,
@@ -30,15 +30,15 @@ import {
   ONLINE_USERS,
   START_TYPING,
   STOP_TYPING,
-} from "./constants/events.js";
+} from "../constants/events.js";
 
-import { Message } from "./models/message.model.js";
-import { getSockets } from "./lib/helper.js";
+import { Message } from "../models/message.model.js";
+import { getSockets } from "../lib/helper.js";
 
-import userRoute from "./routes/user.routes.js";
-import chatRoute from "./routes/chat.routes.js";
-import adminRoute from "./routes/admin.routes.js";
-import { socketAuthenticator } from "./middlewares/auth.js";
+import userRoute from "../routes/user.routes.js";
+import chatRoute from "../routes/chat.routes.js";
+import adminRoute from "../routes/admin.routes.js";
+import { socketAuthenticator } from "../middlewares/auth.js";
 
 dotenv.config();
 

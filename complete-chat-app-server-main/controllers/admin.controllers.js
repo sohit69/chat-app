@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import { User } from "../models/user.model.js";
 import { Chat } from "../models/chat.model.js";
 import { Message } from "../models/message.model.js";
-import { ErrorHandler } from "../utils/errorhandler.js";
+import { ErrorHandler } from "../src/utils/errorhandler.js";
 
 // 🔐 SECRET KEY
 const adminSecretKey = "Admin@123";

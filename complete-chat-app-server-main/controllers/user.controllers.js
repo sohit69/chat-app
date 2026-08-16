@@ -3,8 +3,8 @@ import { User } from '../models/user.model.js';
 import { Chat } from "../models/chat.model.js";
 import { Request } from "../models/request.model.js";
 
-import { ErrorHandler } from '../utils/errorhandler.js';
-import { cookieOptions, emitEvent, generateTokenAndSendCookie, uploadFilesToCloudinary } from "../utils/features.js";
+import { ErrorHandler } from '../src/utils/errorhandler.js';
+import { cookieOptions, emitEvent, generateTokenAndSendCookie, uploadFilesToCloudinary } from "../src/utils/features.js";
 import { NEW_REQUEST, REFETCH_CHATS } from '../constants/events.js';
 import { getOtherMemberExceptUser } from '../lib/helper.js';
 
