@@ -68,7 +68,12 @@ console.log("✅ Cloudinary configured");
 
 const app = express();
 
-// ✅ CORS FIX
+const corsOptions = {
+  origin: "https://chat-app-ui-vc8v.onrender.com",
+  credentials: true,
+};
+app.use(express.json())
+app.use(cookieParser())
 app.use(cors(corsOptions));
 app.options("*", cors(corsOptions));
 
